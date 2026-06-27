@@ -1,19 +1,35 @@
-# ESP32 AI Vision Robot Arm
-A dual-brain robotic arm project using ESP32-S3 and RTX 4050 (YOLOv8) with UDP real-time control.
+<div align="center">
 
-## 🙏 致谢与版权声明 (Credits & Acknowledgments)
+# 🤖 ESP32 AI Vision Robot Arm
 
-本项目的**基础机械臂运动学算法与初始 Web UI 框架**来源于极其优秀的开源创作者 **Tech Talkies**。感谢原作者提供的坚实基础！
-- 📺 **原作者 YouTube 频道**: [Tech Talkies](https://www.youtube.com/@techtalkies1)
-- 💻 **原始 GitHub 仓库**: [TechTalkies/YouTube](https://github.com/TechTalkies/YouTube)
+**A dual-brain robotic arm project using ESP32-S3 and PC RTX 4050 (YOLOv8) with UDP real-time control.**
 
-### 🛠️ 二次开发声明 (Derivative Work)
-本人在原作者优秀的基础框架上，进行了深度的架构升级与二次开发，主要**原创增量**包括：
-1. **AI 视觉闭环**：引入 PC 端 RTX 4050 运行 YOLOv8，实现目标检测。
-2. **通信协议重构**：抛弃 HTTP 阻塞，手写 UDP 广播协议实现 <10ms 极低延迟控制。
-3. **物联网化**：加入 mDNS 局域网发现与 ArduinoOTA 无线固件升级。
-4. **状态机系统**：实现基于关键帧的动作录制与回放。
+**English** | 🌐 [简体中文](./README_CN.md)
 
-**⚖️ 许可与免责声明 (License & Disclaimer)**
-本项目开源仅供**个人学习、技术研究与教育目的 (Educational & Non-Commercial Purpose)**。
-严格遵守原作者的版权要求。任何人不得将本项目直接用于商业产品售卖。如需商业应用，请务必联系原作者 Tech Talkies 获取独立授权。
+</div>
+
+---
+
+## ✨ Features
+
+- **Dual-Brain Architecture**: PC (RTX 4050) handles high-FPS YOLOv8 inference, while ESP32-S3 manages real-time kinematics.
+- **Ultra-Fast UDP Communication**: Ditched blocking TCP/HTTP for raw UDP broadcast, achieving <10ms ultra-low latency.
+- **Smooth Interpolation**: ESP32 implements non-linear smoothing to protect MG90S servos from sudden signal spikes.
+- **Dual-Mode Control**: Seamless switching between LAN Web UI manual control and AI Vision auto-tracking.
+
+## 🙏 Credits & Acknowledgments
+
+The **base kinematics algorithm and initial Web UI framework** of this project originate from the excellent open-source creator **Tech Talkies**. Huge thanks for the solid foundation!
+- 📺 **Original YouTube Channel**: [Tech Talkies](https://www.youtube.com/@techtalkies1)
+- 💻 **Original GitHub Repo**: [TechTalkies/YouTube](https://github.com/TechTalkies/YouTube)
+
+### 🛠️ Derivative Work & Enhancements
+I performed deep architectural upgrades and secondary development on the original framework. The **original increments** include:
+1. **AI Vision Loop**: Integrated PC-side RTX 4050 running YOLOv8 for real-time object detection.
+2. **Protocol Refactoring**: Replaced HTTP blocking with a custom UDP broadcast protocol for ultra-low latency.
+3. **IoT Integration**: Added mDNS LAN discovery and ArduinoOTA wireless firmware updates.
+4. **State Machine**: Implemented keyframe-based action recording and playback.
+
+## ⚖️ License & Disclaimer
+This project is open-sourced strictly for **educational, personal learning, and research purposes**.
+It strictly adheres to the original author's copyright requirements. Commercial use is prohibited. For commercial applications, please contact the original author, Tech Talkies, for independent authorization.
