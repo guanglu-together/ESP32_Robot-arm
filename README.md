@@ -17,6 +17,18 @@
 - **Smooth Interpolation**: ESP32 implements non-linear smoothing to protect MG90S servos from sudden signal spikes.
 - **Dual-Mode Control**: Seamless switching between LAN Web UI manual control and AI Vision auto-tracking.
 
+## 🚀 Future Roadmap
+
+This project is continuously evolving. Here are some exciting features planned for future updates:
+
+- [ ] **✋ Gesture Control (MediaPipe)**: Move beyond color/object tracking. Integrate Google's MediaPipe to recognize hand landmarks (e.g., pinch to grip, open palm to release) for touchless robotic control.
+- [ ] **📐 Inverse Kinematics (IK) & 3D Grasping**: Upgrade from 2D radar tracking to true 3D spatial awareness. Implement IK algorithms to calculate joint angles based on physical coordinates (X, Y, Z), allowing the arm to reach out and grab objects in 3D space.
+- [ ] **🗣️ Voice Command & LLM Integration**: Connect to Large Language Models (LLMs) via API. Command the robot with natural language like *"Pick up the red apple"* or *"Scan the room"*, letting the AI plan the vision and motion path autonomously.
+- [ ] **📦 Multi-Object Intelligent Sorting**: Utilize YOLOv8's multi-class detection to recognize various items on the desk (e.g., batteries, cans, blocks) and program the arm to sort them into different designated zones automatically.
+- [ ] **🎥 AI Vlog Auto-Tracking Gimbal**: Repurpose the rig as a smart desktop camera gimbal. Use face-tracking to keep the user perfectly centered in the frame while recording videos or streaming.
+
+*Feel free to open an Issue or submit a Pull Request if you want to contribute to any of these features!*
+
 ## 🙏 Credits & Acknowledgments
 
 The **base kinematics algorithm and initial Web UI framework** of this project originate from the excellent open-source creator **Tech Talkies**. Huge thanks for the solid foundation!
